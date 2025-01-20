@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Clínica de Evaluación Postural</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ficha Clínica de Evaluación Postural</h1>
+
+<form action="https://script.google.com/macros/s/AKfycbxaG8RNXSAmBNlS1_Z8K9lgepvaP0ViiJfkqWmrrqk/exec" method="POST" enctype="multipart/form-data">
+
+    <!-- Datos Generales -->
+    <label for="nombre">Nombre del paciente:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+    </select>
+
+    <label for="fecha">Fecha de evaluación:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="motivo">Motivo de consulta:</label>
+    <textarea id="motivo" name="motivo" required></textarea>
+
+    <!-- Análisis Postural -->
+    <h2>Evaluación Postural (Cefalocaudal)</h2>
+
+    <label for="cabeza">1. Cabeza y cuello (Inclinación lateral):</label>
+    <select id="cabeza" name="cabeza" required>
+        <option value="Derecha">Derecha</option>
+        <option value="Izquierda">Izquierda</option>
+        <option value="Ninguna">Ninguna</option>
+    </select>
+
+    <label for="rotacion_cervical">Rotación cervical:</label>
+    <select id="rotacion_cervical" name="rotacion_cervical" required>
+        <option value="Derecha">Derecha</option>
+        <option value="Izquierda">Izquierda</option>
+        <option value="Ninguna">Ninguna</option>
+    </select>
+
+    <label for="protraccion_cervical">Protracción/retracción cervical:</label>
+    <input type="text" id="protraccion_cervical" name="protraccion_cervical">
+
+    <label for="hombros">2. Hombros y cintura escapular:</label>
+    <select id="hombros" name="hombros" required>
+        <option value="Simétrica">Simétrica</option>
+        <option value="Asimétrica">Asimétrica</option>
+    </select>
+
+    <label for="rotacion_escapular">Rotación escapular:</label>
+    <select id="rotacion_escapular" name="rotacion_escapular" required>
+        <option value="Normal">Normal</option>
+        <option value="Anteriorizada">Anteriorizada</option>
+        <option value="Posteriorizada">Posteriorizada</option>
+    </select>
+
+    <label for="comentarios_hombros">Comentarios adicionales sobre hombros:</label>
+    <textarea id="comentarios_hombros" name="comentarios_hombros"></textarea>
+
+    <label for="torax">3. Tórax y columna vertebral (Simetría):</label>
+    <select id="torax" name="torax" required>
+        <option value="Normal">Normal</option>
+        <option value="Asimétrica">Asimétrica</option>
+    </select>
+
+    <label for="forma_torax">Forma del tórax:</label>
+    <input type="text" id="forma_torax" name="forma_torax">
+
+    <label for="comentarios_torax">Comentarios adicionales sobre tórax:</label>
+    <textarea id="comentarios_torax" name="comentarios_torax"></textarea>
+
+    <label for="pelvis">4. Pelvis y miembros inferiores:</label>
+    <select id="pelvis" name="pelvis" required>
+        <option value="Normal">Normal</option>
+        <option value="Anterior">Anterior</option>
+        <option value="Posterior">Posterior</option>
+    </select>
+
+    <label for="alt_crestas">Altura de crestas ilíacas:</label>
+    <select id="alt_crestas" name="alt_crestas" required>
+        <option value="Simétrica">Simétrica</option>
+        <option value="Asimétrica">Asimétrica</option>
+    </select>
+
+    <label for="rodillas">Rodillas:</label>
+    <select id="rodillas" name="rodillas" required>
+        <option value="Normales">Normales</option>
+        <option value="Genu varo">Genu varo</option>
+        <option value="Genu valgo">Genu valgo</option>
+    </select>
+
+    <label for="comentarios_pelvis">Comentarios adicionales sobre pelvis:</label>
+    <textarea id="comentarios_pelvis" name="comentarios_pelvis"></textarea>
+
+    <!-- Carga de imágenes -->
+    <label for="imagen">Cargar imágenes de la evaluación postural:</label>
+    <input type="file" id="imagen" name="imagen" accept="image/*">
+
+    <!-- Observaciones y Conclusiones -->
+    <label for="hallazgos">Hallazgos principales:</label>
+    <textarea id="hallazgos" name="hallazgos" required></textarea>
+
+    <label for="recomendaciones">Recomendaciones:</label>
+    <textarea id="recomendaciones" name="recomendaciones" required></textarea>
+
+    <!-- Enviar -->
+    <button type="submit">Enviar</button>
+
+</form>
+
+</body>
+</html>
